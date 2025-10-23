@@ -1,0 +1,12 @@
+node_modules/
+coverage/
+package/
+reports/
+docs/.vitepress/cache/
+yarn.lock
+pnpm-lock.yaml
+temp
+jsr.json
+.npmrc
+package-lite.json
+package-main.json

@@ -1,0 +1,26 @@
+{
+  "name": "@webpod/template",
+  "version": "0.0.0",
+  "description": "Webpod TS template",
+  "type": "module",
+  "main": "target/index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "homepage": "https://github.com/webpod/template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpod/template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webpod/template/issues"
+  },
+  "license": "MIT",
+  "author": "Webpod <https://webpod.dev/>",
+  "devDependencies": {
+    "@types/node": "^24.9.0",
+    "oxc-transform": "^0.95.0",
+    "size-limit": "^11.2.0",
+    "vitest": "^3.2.4"
+  }
+}
