@@ -2,6 +2,7 @@ node_modules/
 coverage/
 package/
 reports/
+build/
 docs/.vitepress/cache/
 yarn.lock
 pnpm-lock.yaml

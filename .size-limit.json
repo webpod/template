@@ -1,0 +1,13 @@
+[
+  {
+    "name": "all",
+    "path": [
+      "build",
+      "README.md",
+      "LICENSE"
+    ],
+    "limit": "2.00 kB",
+    "brotli": false,
+    "gzip": false
+  }
+]

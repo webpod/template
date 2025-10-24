@@ -5,7 +5,11 @@
   "type": "module",
   "main": "target/index.js",
   "scripts": {
-    "test": "exit 0"
+    "build": "concurrently 'npm:build:*'",
+    "build:oxc": "node scripts/build-oxc.ts",
+    "test": "concurrently 'npm:test:*'",
+    "test:unit": "vitest run --coverage --config ./vitest.config.js",
+    "test:size": "size-limit"
   },
   "homepage": "https://github.com/webpod/template#readme",
   "repository": {
@@ -18,9 +22,12 @@
   "license": "MIT",
   "author": "Webpod <https://webpod.dev/>",
   "devDependencies": {
+    "@size-limit/file": "^11.2.0",
     "@types/node": "^24.9.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "oxc-transform": "^0.95.0",
     "size-limit": "^11.2.0",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "concurrently": "^9.2.1"
   }
 }
