@@ -7,6 +7,7 @@
   "scripts": {
     "build": "concurrently 'npm:build:*'",
     "build:oxc": "node scripts/build-oxc.ts",
+    "build:pkgjson": "node scripts/build-pkgjson.ts",
     "test": "concurrently 'npm:test:*'",
     "test:unit": "vitest run --coverage --config ./vitest.config.js",
     "test:size": "size-limit"
