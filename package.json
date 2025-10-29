@@ -21,7 +21,8 @@
     "_build:dual": "node scripts/build-esbuild.ts --hybrid --format=cjs",
     "test": "concurrently 'npm:test:*'",
     "test:unit": "vitest run --coverage --config ./vitest.config.js",
-    "test:size": "size-limit"
+    "test:size": "size-limit",
+    "test:jsr": "jsr publish --dry-run"
   },
   "homepage": "https://github.com/webpod/template#readme",
   "repository": {
@@ -44,6 +45,7 @@
     "esbuild-plugin-extract-helpers": "^0.0.6",
     "esbuild-plugin-hybrid-export": "^0.3.1",
     "esbuild-plugin-transform-hook": "^0.2.0",
+    "jsr": "^0.13.5",
     "minimist": "^1.2.8",
     "oxc-transform": "^0.95.0",
     "size-limit": "^11.2.0",
