@@ -22,7 +22,8 @@
     "test": "concurrently 'npm:test:*'",
     "test:unit": "vitest run --coverage --config ./vitest.config.js",
     "test:size": "size-limit",
-    "test:jsr": "jsr publish --dry-run"
+    "test:jsr": "jsr publish --dry-run",
+    "test:audit": "npm audit"
   },
   "homepage": "https://github.com/webpod/template#readme",
   "repository": {
