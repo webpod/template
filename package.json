@@ -3,11 +3,22 @@
   "version": "0.0.0",
   "description": "Webpod TS template",
   "type": "module",
-  "main": "target/index.js",
+  "main": "build/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./build/index.d.ts",
+      "import": "./build/index.js",
+      "require": "./build/index.cjs",
+      "default": "./build/index.js"
+    }
+  },
   "scripts": {
     "build": "concurrently 'npm:build:*'",
-    "build:oxc": "node scripts/build-oxc.ts",
+    "build:esm": "node scripts/build-oxc.ts",
     "build:pkgjson": "node scripts/build-pkgjson.ts",
+    "build:jsr": "node scripts/build-jsr.ts",
+    "_build:dts": "tsc --emitDeclarationOnly --outDir build",
+    "_build:dual": "node scripts/build-esbuild.ts --hybrid --format=cjs",
     "test": "concurrently 'npm:test:*'",
     "test:unit": "vitest run --coverage --config ./vitest.config.js",
     "test:size": "size-limit"
@@ -26,9 +37,17 @@
     "@size-limit/file": "^11.2.0",
     "@types/node": "^24.9.0",
     "@vitest/coverage-v8": "^3.2.4",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.25.10",
+    "esbuild-node-externals": "^1.18.0",
+    "esbuild-plugin-entry-chunks": "^0.1.17",
+    "esbuild-plugin-extract-helpers": "^0.0.6",
+    "esbuild-plugin-hybrid-export": "^0.3.1",
+    "esbuild-plugin-transform-hook": "^0.2.0",
+    "minimist": "^1.2.8",
     "oxc-transform": "^0.95.0",
     "size-limit": "^11.2.0",
-    "vitest": "^3.2.4",
-    "concurrently": "^9.2.1"
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src/",
+    "baseUrl": "./src/",
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "test"
+  ]
+}
