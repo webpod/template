@@ -39,10 +39,10 @@
   "author": "Webpod <https://webpod.dev/>",
   "devDependencies": {
     "@size-limit/file": "^11.2.0",
-    "@types/node": "^24.9.2",
-    "@vitest/coverage-v8": "^4.0.5",
+    "@types/node": "^24.10.0",
+    "@vitest/coverage-v8": "^4.0.6",
     "concurrently": "^9.2.1",
-    "esbuild": "^0.25.11",
+    "esbuild": "^0.25.12",
     "esbuild-node-externals": "^1.18.0",
     "esbuild-plugin-entry-chunks": "^0.1.17",
     "esbuild-plugin-extract-helpers": "^0.0.6",
@@ -50,9 +50,9 @@
     "esbuild-plugin-transform-hook": "^0.2.0",
     "jsr": "^0.13.5",
     "minimist": "^1.2.8",
-    "oxc-transform": "^0.95.0",
+    "oxc-transform": "^0.96.0",
     "size-limit": "^11.2.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.5"
+    "vitest": "^4.0.6"
   }
 }
