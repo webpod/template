@@ -23,7 +23,9 @@
     "test:unit": "vitest run --coverage --config ./vitest.config.js",
     "test:size": "size-limit",
     "test:jsr": "jsr publish --dry-run",
-    "test:audit": "npm audit"
+    "test:audit": "npm audit",
+    "smoke:esm": "node test/smoke/index.test.mjs",
+    "smoke:cjs": "node test/smoke/index.test.cjs"
   },
   "homepage": "https://github.com/webpod/template#readme",
   "repository": {
