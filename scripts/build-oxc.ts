@@ -9,8 +9,9 @@ const srcDir = path.join(root, 'src')
 
 for (const file of fs.globSync('**/*.ts', { cwd: srcDir })) {
   const { dir, name } = path.parse(file)
-  const input = path.join(srcDir, file)
-  const source = fs.readFileSync(input, 'utf-8')
+  const targetDir = path.join(outDir, dir)
+  const sourceFile = path.join(srcDir, file)
+  const source = fs.readFileSync(sourceFile, 'utf-8')
   const { code, declaration } = transform(file, source, {
     lang: 'ts',
     typescript: {
@@ -19,6 +20,9 @@ for (const file of fs.globSync('**/*.ts', { cwd: srcDir })) {
     }
   })
 
-  fs.writeFileSync(path.join(outDir, dir, name + '.js'), code)
-  fs.writeFileSync(path.join(outDir, dir, name + '.d.ts'), declaration)
+  fs.mkdirSync(targetDir, { recursive: true })
+  fs.writeFileSync(path.join(targetDir, name + '.js'), code)
+  fs.writeFileSync(path.join(targetDir, name + '.d.ts'), declaration)
 }
+
+console.log('build:oxc — ok')

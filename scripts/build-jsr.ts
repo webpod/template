@@ -18,3 +18,5 @@ fs.writeFileSync(path.resolve(cwd, 'jsr.json'), JSON.stringify({
     ]
   }
 }, null, 2))
+
+console.log('build:jsr — ok')

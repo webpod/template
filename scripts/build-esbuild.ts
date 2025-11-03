@@ -160,4 +160,5 @@ function unwrapQuotes(str: string) {
   return str.replace(/^['"]|['"]$/g, '')
 }
 
+console.log('build:esbuild — ok')
 process.exit(0)

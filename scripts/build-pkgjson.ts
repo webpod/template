@@ -38,3 +38,4 @@ const pkgJson =
 fs.writeFileSync(path.resolve(root, dest), JSON.stringify(pkgJson, null, 2) + '\n')
 
 console.log(`${dest} prepared for npm`)
+console.log('build:pkgjson — ok')
