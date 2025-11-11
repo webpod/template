@@ -40,7 +40,7 @@
   "devDependencies": {
     "@size-limit/file": "^11.2.0",
     "@types/node": "^24.10.0",
-    "@vitest/coverage-v8": "^4.0.6",
+    "@vitest/coverage-v8": "^4.0.8",
     "concurrently": "^9.2.1",
     "esbuild": "^0.25.12",
     "esbuild-node-externals": "^1.18.0",
@@ -53,6 +53,6 @@
     "oxc-transform": "^0.96.0",
     "size-limit": "^11.2.0",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.8"
   }
 }

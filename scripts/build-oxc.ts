@@ -22,7 +22,7 @@ for (const file of fs.globSync('**/*.ts', { cwd: srcDir })) {
 
   fs.mkdirSync(targetDir, { recursive: true })
   fs.writeFileSync(path.join(targetDir, name + '.js'), code)
-  fs.writeFileSync(path.join(targetDir, name + '.d.ts'), declaration)
+  fs.writeFileSync(path.join(targetDir, name + '.d.ts'), declaration as string)
 }
 
 console.log('build:oxc — ok')
